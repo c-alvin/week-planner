@@ -1,0 +1,17 @@
+.background {
+  background-color: #f9f9f9;
+}
+
+.weekly-planner-styling {
+  text-align: center;
+  font-size: 32px;
+}
+
+.add-entry-button {
+  padding: 1rem 3rem;
+  font-size: 18px;
+  border-radius: 4px;
+  border-style: none;
+  background-color: #7161ef;
+  color: white;
+}

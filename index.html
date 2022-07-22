@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Week Planner</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="layout.css">
 </head>
-<body>
+<body class="background">
   <header>
     <div class="container">
       <div class="row">
         <div class="column-full">
-          <h1>Weekly Planner</h1>
+          <h1 class="weekly-planner-styling">Weekly Planner</h1>
         </div>
       </div>
     </div>
@@ -20,7 +21,7 @@
     <div class="container">
       <div class="row">
         <div class="column-full">
-          <button>Add Entry</button>
+          <button class="add-entry-button">Add Entry</button>
         </div>
       </div>
       <div class="modal-background">
@@ -43,7 +44,19 @@
                   <option value="sunday">Sunday</option>
                 </select>
               </div>
-              <div class="column-flex"></div>
+              <div class="column-flex">
+                <input type="text" name="time" placeholder="Enter Time">
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-full">
+                <textarea name="description" id="description" placeholder="Description"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div class="column-full">
+                <button>Submit</button>
+              </div>
             </div>
           </form>
         </div>
