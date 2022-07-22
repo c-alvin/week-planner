@@ -38,12 +38,9 @@
 }
 
 .modal-window {
-  border-style: solid white;
   background-color: white;
   border-radius: 4px;
-  display: flex;
   height: 250px;
-  align-items: center;
   width: 400px;
 }
 
