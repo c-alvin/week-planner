@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 .background {
   background-color: #f9f9f9;
 }
@@ -47,6 +51,10 @@
   text-align: center;
 }
 
+.align-center {
+  align-items: center;
+}
+
 .justify-left {
   justify-content: left;
 }
@@ -57,6 +65,10 @@
 
 .display-flex {
   display: flex;
+}
+
+.space-evenly {
+  justify-content: space-evenly;
 }
 
 .margin-left-small {
@@ -77,4 +89,18 @@
 
 .submit-button {
   padding-right: 0.5rem;
+}
+
+.height {
+  height: 200px;
+}
+
+a {
+  text-decoration: none;
+  padding: 2rem 0;
+  width: 7rem;
+  border: solid 1px black;
+  background-color: pink;
+  color: white;
+  text-align: center;
 }
