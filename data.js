@@ -1,3 +1,5 @@
+/* exported data */
+
 var data = {
   view: 'monday',
   editing: null,

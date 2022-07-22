@@ -1,11 +1,25 @@
-// var $form = document.querySelector('form');
 
-// function submitForm(event) {
-//   event.preventDefault();
-//   var objForm =
-// }
+/* global data */
 
-// $form.addEventListener('submit', submitForm);
+var $form = document.querySelector('form');
+
+function submitForm(event) {
+  event.preventDefault();
+  var objForm = {
+    day: $form.elements.day.value,
+    time: $form.elements.time.value,
+    description: $form.elements.description.value,
+    entryId: data.nextEntryId
+  };
+
+  for (var property in data) {
+    if (objForm.day === property) {
+      data[property].push(objForm);
+    }
+  }
+}
+
+$form.addEventListener('submit', submitForm);
 
 var modalOn = false;
 
