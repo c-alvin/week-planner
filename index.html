@@ -26,39 +26,43 @@
       </div>
       <div class="modal-background">
         <div class="modal-window">
-          <form>
-            <div class="row">
-              <div class="column-full">
-                <h1>Add Entry</h1>
-              </div>
+          <div class="row">
+            <div class="column-full">
+              <form>
+                <div class="row">
+                  <div class="column-full text-align-center">
+                    <h1>Add Entry</h1>
+                  </div>
+                </div>
+                <div class="row justify-left">
+                  <div class="column-flex display-flex margin-left-small ">
+                    <select name="day" id="days">
+                      <option value="monday">Monday</option>
+                      <option value="tuesday">Tuesday</option>
+                      <option value="wednesday">Wednesday</option>
+                      <option value="thursday">Fhursday</option>
+                      <option value="friday">Friday</option>
+                      <option value="saturday">Saturday</option>
+                      <option value="sunday">Sunday</option>
+                    </select>
+                  </div>
+                  <div class="column-flex display-flex margin-left-small ">
+                    <input class="time-size" type="text" name="time" placeholder="Enter Time">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column-full margin-left-small margin-right-small">
+                    <textarea name="description" id="description" placeholder="Description" class="description-size"></textarea>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="column-full text-align-right margin-right-small">
+                    <button class="submit-button">Submit</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="row">
-              <div class="column-flex">
-                <select name="day" id="days">
-                  <option value="monday">Monday</option>
-                  <option value="tuesday">Tuesday</option>
-                  <option value="wednesday">Wednesday</option>
-                  <option value="thursday">Fhursday</option>
-                  <option value="friday">Friday</option>
-                  <option value="saturday">Saturday</option>
-                  <option value="sunday">Sunday</option>
-                </select>
-              </div>
-              <div class="column-flex">
-                <input type="text" name="time" placeholder="Enter Time">
-              </div>
-            </div>
-            <div class="row">
-              <div class="column-full">
-                <textarea name="description" id="description" placeholder="Description"></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <div class="column-full">
-                <button>Submit</button>
-              </div>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
     </div>

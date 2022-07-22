@@ -38,5 +38,43 @@
   background-color: white;
   border-radius: 4px;
   display: flex;
-  justify-content: center;
+  height: 250px;
+  align-items: center;
+  width: 400px;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.justify-left {
+  justify-content: left;
+}
+
+.time-size {
+  width: 4rem;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.margin-left-small {
+  margin-left: 1rem;
+}
+
+.description-size {
+  width: 100%;
+}
+
+.margin-right-small {
+  margin-right: 1rem;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.submit-button {
+  padding-right: 0.5rem;
 }
