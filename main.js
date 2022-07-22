@@ -12,11 +12,15 @@ function submitForm(event) {
     entryId: data.nextEntryId
   };
 
+  data.nextEntryId += 1;
   for (var property in data) {
     if (objForm.day === property) {
       data[property].push(objForm);
     }
   }
+
+  $form.reset();
+  $modal.className = 'modal-background hidden';
 }
 
 $form.addEventListener('submit', submitForm);
@@ -36,3 +40,24 @@ function clickAddEntryButton(event) {
   }
 }
 $addEntryButton.addEventListener('click', clickAddEntryButton);
+
+var $a = document.querySelectorAll('a');
+var $dataView = document.querySelectorAll('[data-view]');
+
+function switchView(viewName) {
+  for (var i = 0; i < $dataView.length; i++) {
+    if (viewName === $dataView[i]) {
+      $dataView[i].className = 'view';
+      data.view = viewName;
+    } else {
+      $dataView[i].className = 'hidden';
+    }
+  }
+}
+
+function handleClick(event) {
+  switchView(event.target.getAttribute('data-view'));
+}
+
+var $days = document.querySelector('#days');
+$days.addEventListener('click', handleClick);

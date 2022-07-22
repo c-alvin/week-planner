@@ -12,3 +12,15 @@ var data = {
   friday: [],
   saturday: []
 };
+
+var previousData = localStorage.getItem('weekly-planner-local-storage');
+if (previousData !== null) {
+  data = JSON.parse(previousData);
+}
+
+function stringifyData(event) {
+  var dataJSON = JSON.stringify(data);
+  localStorage.setItem('weekly-planner-local-storage', dataJSON);
+}
+
+window.addEventListener('beforeunload', stringifyData);
