@@ -44,20 +44,19 @@ $addEntryButton.addEventListener('click', clickAddEntryButton);
 
 var $a = document.querySelectorAll('a');
 var $dataView = document.querySelectorAll('[data-view]');
-
-function switchView(viewName) {
-  for (var i = 0; i < $dataView.length; i++) {
-    if (viewName === $dataView[i]) {
-      renderPlannerEntry(data[viewName]);
-      data.view = viewName;
-    } else {
-
-    }
-  }
-}
+var $tbody = document.querySelector('tbody');
 
 function handleClick(event) {
-  switchView(event.target.getAttribute('data-view'));
+  debugger;
+  if (event.target.matches('a') === false) {
+    return;
+  }
+  for (var property in data) {
+    if (event.target.getAttribute('data-view') === property) {
+      var renderedEntry = renderPlannerEntry(data[property]);
+      $tbody.appendChild(renderedEntry);
+    }
+  }
 }
 
 var $days = document.querySelector('#days');
@@ -77,9 +76,3 @@ function renderPlannerEntry(objForm) {
   console.log(trow);
   return trow;
 }
-
-function contentLoad(event) {
-  for (var i = 0; i < )
-}
-
-window.addEventListener('DOMContentLoaded', contentLoad);
