@@ -13,6 +13,7 @@ function submitForm(event) {
   };
 
   data.nextEntryId += 1;
+  renderPlannerEntry(objForm);
   for (var property in data) {
     if (objForm.day === property) {
       data[property].push(objForm);
@@ -47,10 +48,10 @@ var $dataView = document.querySelectorAll('[data-view]');
 function switchView(viewName) {
   for (var i = 0; i < $dataView.length; i++) {
     if (viewName === $dataView[i]) {
-      $dataView[i].className = 'view';
+      renderPlannerEntry(data[viewName]);
       data.view = viewName;
     } else {
-      $dataView[i].className = 'hidden';
+
     }
   }
 }
@@ -61,3 +62,24 @@ function handleClick(event) {
 
 var $days = document.querySelector('#days');
 $days.addEventListener('click', handleClick);
+
+function renderPlannerEntry(objForm) {
+  var trow = document.createElement('tr');
+
+  var tdata = document.createElement('td');
+  tdata.textContent = objForm.time;
+  trow.appendChild(tdata);
+
+  var tdata2 = document.createElement('td');
+  tdata.textContent = objForm.description;
+  trow.appendChild(tdata2);
+
+  console.log(trow);
+  return trow;
+}
+
+function contentLoad(event) {
+  for (var i = 0; i < )
+}
+
+window.addEventListener('DOMContentLoaded', contentLoad);

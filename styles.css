@@ -101,3 +101,7 @@ a {
   color: white;
   text-align: center;
 }
+
+.justify-center {
+  justify-content: center;
+}
